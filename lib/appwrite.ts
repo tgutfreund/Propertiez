@@ -64,13 +64,14 @@ export async function logout() {
     }
 }
 
-export async function getUser() {
+export async function getCurrentUser(params: Record<string, string | number> = {}) {
     try {
         const response = await account.get();
         if (response.$id){
             const userAvatar = avatar.getInitials(response.name);
             return { ...response, avatar: userAvatar.toString() };
         }
+        return null; // Add this line for when user doesn't exist
     } catch (error) {
         console.error(error);
         return null;
