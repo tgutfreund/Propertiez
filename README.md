@@ -1,51 +1,189 @@
-# Welcome to your Expo app 👋
+# 🏠 Propertiez
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native property rental app built with Expo, featuring Google OAuth authentication, property browsing, and detailed property information.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- **🔐 Authentication**: Secure Google OAuth login with Appwrite
+- **🏘️ Property Browsing**: Browse featured and recommended properties
+- **🔍 Search & Filter**: Advanced search with filtering capabilities  
+- **📱 Property Details**: Comprehensive property information including:
+  - Image galleries
+  - Facilities and amenities
+  - Agent contact information
+  - User reviews and ratings
+  - Interactive location maps
+- **⭐ Reviews**: View property ratings and user comments
+- **📲 Responsive Design**: Optimized for both iOS and Android
+- **🎨 Modern UI**: Clean interface built with NativeWind (Tailwind CSS)
 
+## 🛠️ Tech Stack
+
+- **Framework**: [Expo](https://expo.dev) with React Native
+- **Routing**: Expo Router with file-based routing
+- **Styling**: [NativeWind](https://www.nativewind.dev/) (Tailwind CSS for React Native)
+- **Backend**: [Appwrite](https://appwrite.io/) for authentication and database
+- **TypeScript**: Full type safety throughout the application
+- **Authentication**: Google OAuth via Appwrite
+- **Navigation**: Bottom tabs with nested stack navigation
+
+## 📱 Screenshots
+
+<!-- Add screenshots here when available -->
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Expo CLI
+- iOS Simulator (for iOS development) or Android Emulator
+- Expo Go app (for testing on physical device)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/tgutfreund/Propertiez.git
+   cd Propertiez
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   EXPO_PUBLIC_APPWRITE_ENDPOINT=your_appwrite_endpoint
+   EXPO_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
+   EXPO_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
+   EXPO_PUBLIC_APPWRITE_GALLERIES_COLLECTION_ID=your_galleries_collection_id
+   EXPO_PUBLIC_APPWRITE_REVIEWS_COLLECTION_ID=your_reviews_collection_id
+   EXPO_PUBLIC_APPWRITE_AGENTS_COLLECTION_ID=your_agents_collection_id
+   EXPO_PUBLIC_APPWRITE_PROPERTIES_COLLECTION_ID=your_properties_collection_id
+   ```
 
+4. **Start the development server**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. **Run the app**
+   - Use Expo Go app to scan the QR code
+   - Press `i` for iOS simulator
+   - Press `a` for Android emulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📁 Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+Propertiez/
+├── app/                    # Main application code (Expo Router)
+│   ├── (root)/            # Protected routes
+│   │   ├── (tabs)/        # Tab navigation
+│   │   │   ├── index.tsx  # Home screen
+│   │   │   ├── explore.tsx # Property search
+│   │   │   └── profile.tsx # User profile
+│   │   └── properties/    # Property details
+│   │       └── [id].tsx   # Dynamic property page
+│   ├── _layout.tsx        # Root layout
+│   ├── sign-in.tsx        # Authentication screen
+│   └── globals.css        # Global styles
+├── components/            # Reusable components
+│   ├── Cards.tsx         # Property cards
+│   ├── Comment.tsx       # Review component
+│   ├── Filters.tsx       # Search filters
+│   ├── NoResults.tsx     # Empty state
+│   └── Search.tsx        # Search component
+├── lib/                  # Utilities and services
+│   ├── appwrite.ts       # Appwrite configuration
+│   ├── global-provider.tsx # Global state management
+│   ├── useAppwrite.ts    # Custom hook for API calls
+│   └── data.ts          # Mock data and constants
+├── constants/           # App constants
+│   ├── data.ts         # Static data
+│   ├── icons.ts        # Icon imports
+│   └── images.ts       # Image imports
+├── assets/             # Static assets
+│   ├── fonts/          # Custom fonts
+│   ├── icons/          # Icon files
+│   └── images/         # Image files
+└── package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Configuration
 
-## Learn more
+### Appwrite Setup
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Create an Appwrite project
+2. Set up Google OAuth provider
+3. Create database collections for:
+   - Properties
+   - Agents
+   - Reviews
+   - Galleries
+4. Configure your environment variables
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Google OAuth
 
-## Join the community
+1. Configure Google OAuth in your Appwrite console
+2. Add your app's scheme to allowed redirect URIs
+3. Update `app.json` with your app scheme
 
-Join our community of developers creating universal apps.
+## 🎨 Styling
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# Propertiez
+This project uses NativeWind for styling, which allows you to use Tailwind CSS classes in React Native components.
+
+Example:
+```tsx
+<View className="flex-1 bg-white px-5">
+  <Text className="text-2xl font-rubik-bold text-black-300">
+    Welcome to Propertiez
+  </Text>
+</View>
+```
+
+## 📋 Available Scripts
+
+```bash
+npm start          # Start the Expo development server
+npm run android    # Run on Android
+npm run ios        # Run on iOS
+npm run web        # Run on web
+npm run lint       # Run ESLint
+npm run reset-project # Reset to blank project
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**tgutfreund**
+- GitHub: [@tgutfreund](https://github.com/tgutfreund)
+
+## 🙏 Acknowledgments
+
+- [Expo](https://expo.dev/) for the amazing React Native framework
+- [Appwrite](https://appwrite.io/) for backend services
+- [NativeWind](https://www.nativewind.dev/) for Tailwind CSS integration
+- [React Navigation](https://reactnavigation.org/) for navigation
+
+## 📞 Support
+
+If you have any questions or need help with setup, feel free to open an issue or contact the maintainer.
+
+---
+
+**Happy Coding! 🚀**
