@@ -1,10 +1,10 @@
 import { ID } from "react-native-appwrite";
 import { config, databases } from "./appwrite";
 import {
-    agentImages,
-    galleryImages,
-    propertiesImages,
-    reviewImages,
+  agentImages,
+  galleryImages,
+  propertiesImages,
+  reviewImages,
 } from "./data";
 
 const COLLECTIONS = {

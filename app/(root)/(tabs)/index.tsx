@@ -7,12 +7,13 @@ import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
+
 export default function Index() {
   const { user } = useGlobalContext();
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList
-        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+        data={[1, 2, 3, 4, 5]}
         renderItem={({ item }) => <Card />}
         keyExtractor={(item) => item.toString()}
         numColumns={2}
@@ -40,7 +41,7 @@ export default function Index() {
                 </TouchableOpacity>
               </View>
               <FlatList
-                data={[1, 2, 3, 4, 5]}
+                data={[6,7,8,9]}
                 renderItem={({ item }) => <FeaturedCard />}
                 keyExtractor={(item) => item.toString()}
                 horizontal
