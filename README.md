@@ -27,10 +27,6 @@ A modern React Native property rental app built with Expo, featuring Google OAut
 - **Authentication**: Google OAuth via Appwrite
 - **Navigation**: Bottom tabs with nested stack navigation
 
-## 📱 Screenshots
-
-<!-- Add screenshots here when available -->
-
 ## 🚀 Getting Started
 
 ### Prerequisites
