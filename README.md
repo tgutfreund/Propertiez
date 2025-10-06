@@ -157,13 +157,3 @@ npm run reset-project # Reset to blank project
 **tgutfreund**
 - GitHub: [@tgutfreund](https://github.com/tgutfreund)
 
-## 🙏 Acknowledgments
-
-- [Expo](https://expo.dev/) for the amazing React Native framework
-- [Appwrite](https://appwrite.io/) for backend services
-- [NativeWind](https://www.nativewind.dev/) for Tailwind CSS integration
-- [React Navigation](https://reactnavigation.org/) for navigation
-
----
-
-**Happy Coding! 🚀**
