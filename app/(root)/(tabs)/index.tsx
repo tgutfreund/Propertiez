@@ -9,9 +9,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const { user } = useGlobalContext();
-  console.log("Full user object:", JSON.stringify(user, null, 2));
-  console.log("Avatar property:", user?.avatar);
-  console.log("Avatar type:", typeof user?.avatar);
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList
