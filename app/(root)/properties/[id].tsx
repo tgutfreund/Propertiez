@@ -1,3 +1,15 @@
+// This file defines the Property details screen, which displays all information about a single property.
+// It fetches property data by ID and shows images, agent info, facilities, gallery, reviews, and more.
+
+// Key Components:
+// - Comment: Displays a single user review.
+// - FlatList: Renders the property gallery images.
+// - Various icons and images for property features and agent info.
+
+// Key Functions:
+// - useAppwrite: Fetches property data from the backend using the property ID from the route.
+// - router.back: Navigates back to the previous screen.
+
 import { router, useLocalSearchParams } from "expo-router";
 import {
   Dimensions,

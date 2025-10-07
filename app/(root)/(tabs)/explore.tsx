@@ -1,3 +1,16 @@
+// This file defines the Explore screen, where users can search and filter properties.
+// It fetches property data from the backend and displays it in a grid layout.
+
+// Key Components:
+// - Search: A search bar for querying properties.
+// - Filters: A component for filtering property results.
+// - Card: A reusable component for displaying individual property details.
+// - NoResults: A fallback component displayed when no properties match the search.
+
+// Key Functions:
+// - handleCardPress: Navigates to the property details page when a card is pressed.
+// - useEffect: Refetches property data whenever the search parameters change.
+
 import { Card } from "@/components/Cards";
 import Filters from "@/components/Filters";
 import NoResults from "@/components/NoResults";
@@ -9,8 +22,6 @@ import { router, useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import { ActivityIndicator, FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
-
 
 export default function Explore() {
   const params = useLocalSearchParams<{query?: string; filter: string;}>();

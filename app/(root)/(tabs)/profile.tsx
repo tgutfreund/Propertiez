@@ -1,3 +1,13 @@
+// This file defines the Profile screen, where users can view and manage their account information.
+// It displays the user's avatar, name, and provides access to settings, bookings, payments, and logout functionality.
+
+// Key Components:
+// - SettingsItem: A reusable component for rendering each settings option.
+// - Profile: The main profile screen component, displaying user info and settings.
+
+// Key Functions:
+// - handleLogout: Logs the user out and refreshes the user context.
+
 import { settings } from "@/constants/data"
 import icons from "@/constants/icons"
 import { logout } from "@/lib/appwrite"

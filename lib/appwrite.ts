@@ -1,3 +1,8 @@
+// This file configures Appwrite client and authentication for the app.
+// It exports functions for login, logout, and fetching the current user.
+// The Appwrite client is set up with environment variables for endpoint and project ID.
+// Google OAuth is used for authentication.
+
 import * as Linking from 'expo-linking';
 import { openAuthSessionAsync } from 'expo-web-browser';
 import { Account, Avatars, Client, Databases, OAuthProvider, Query } from 'react-native-appwrite';

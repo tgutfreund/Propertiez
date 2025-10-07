@@ -1,3 +1,7 @@
+// This file defines the root layout for the app.
+// It loads custom fonts, shows a splash screen until fonts are ready, and wraps the app in the global provider.
+// The Stack component from expo-router is used for navigation, with headers hidden by default.
+
 import GlobalProvider from '@/lib/global-provider';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from "expo-router";

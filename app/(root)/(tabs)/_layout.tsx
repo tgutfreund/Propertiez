@@ -1,3 +1,16 @@
+// This file defines the layout for the bottom tab navigation in the app.
+// It uses the `expo-router` Tabs component to manage navigation between screens.
+// Each tab is represented with an icon and a title, styled dynamically based on focus state.
+
+// TabIcon: A reusable component for rendering tab icons and titles.
+// Props:
+// - focused: Boolean indicating if the tab is active.
+// - icon: The icon to display for the tab.
+// - title: The title to display below the icon.
+
+// TabsLayout: The main layout component for the bottom tab navigation.
+// It defines three tabs: Home, Explore, and Profile, each with its own icon and screen.
+
 import icons from '@/constants/icons'
 import { Tabs } from 'expo-router'
 import React from 'react'

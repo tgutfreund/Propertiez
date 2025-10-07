@@ -1,3 +1,8 @@
+// This file defines the Sign-In screen for the app.
+// It allows users to log in with Google using Appwrite authentication.
+// If the user is already logged in, it redirects to the home screen.
+// On login failure, it shows an error alert.
+
 import icons from '@/constants/icons'
 import images from '@/constants/images'
 import { login } from '@/lib/appwrite'

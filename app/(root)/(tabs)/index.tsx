@@ -1,3 +1,17 @@
+// This file defines the Home screen, which serves as the main entry point for the app.
+// It displays featured properties, recommended properties, and allows users to search and filter properties.
+
+// Key Components:
+// - Search: A search bar for querying properties.
+// - Filters: A component for filtering property results.
+// - Card: A reusable component for displaying individual property details.
+// - FeaturedCard: A specialized card for displaying featured properties.
+// - NoResults: A fallback component displayed when no properties match the search.
+
+// Key Functions:
+// - handleCardPress: Navigates to the property details page when a card is pressed.
+// - useEffect: Refetches property data whenever the search parameters change.
+
 import { Card, FeaturedCard } from "@/components/Cards";
 import Filters from "@/components/Filters";
 import NoResults from "@/components/NoResults";
